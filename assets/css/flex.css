@@ -1,0 +1,30 @@
+*
+{
+    margin: 0;
+}
+div
+{
+    width : 100px;
+    height : 100px;
+}
+.box_red
+{
+    background-color: red;
+}
+.box_yellow
+{
+    background-color: yellow;
+}
+.box_green
+{
+    background-color: green;
+}
+.flex-container
+{
+    display: flex;
+    height: 40%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    gap:20%;
+}
