@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            justify-content: center;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .center-form {
+            width: 30%;
+            padding: 10px;
+            border: solid;
+            background-color: rgb(218, 220, 220);
+            border-radius: 15px;
+            justify-content: center;
+            height: auto;
+            box-shadow:
+                1.8px 1.8px 0.3px rgba(0, 0, 0, 0.014),
+                3.6px 3.6px 0.6px rgba(0, 0, 0, 0.028),
+                5.2px 5.2px 0.9px rgba(0, 0, 0, 0.04),
+                6.7px 6.7px 1.3px rgba(0, 0, 0, 0.052),
+                8.2px 8.2px 1.8px rgba(0, 0, 0, 0.063),
+                9.5px 9.5px 2.5px rgba(0, 0, 0, 0.072),
+                10.8px 10.8px 3.5px rgba(0, 0, 0, 0.081),
+                12.3px 12.3px 5.3px rgba(0, 0, 0, 0.09),
+                15.1px 15.1px 8.8px rgba(0, 0, 0, 0.102),
+                25px 25px 19px rgba(0, 0, 0, 0.14);
+        }
+        .content {
+            border-radius: 10px;
+            text-align: center;
+            justify-content: center;
+            border-style: none;
+        }
+        input
+        {
+            border-radius: 10px;
+            padding: 10px;
+            width: 80%;
+        }
+        input:hover
+        {
+            border-bottom: 10px;
+            border-color: blueviolet;
+        }
+        .button
+        {
+            color:white;
+            background-color: blueviolet;
+            padding: 10px;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+        
+    <form class="center-form" onsubmit="return showName(event)">
+        <h1><center>Contact Form</center></h1>
+        <div class="content">
+            <input type="text" name="name" id="name" placeholder="Name"><br><br>
+            <input type="email" name="email" id="email" placeholder="Email" required><br><br>
+            <input type="phone" name="phone" id="phone" placeholder="Phone" required><br><br>
+            <input type="password" name="password" id="password" placeholder="Password" required><br><br>
+            <input type="submit" class="button" value="Register">
+        </div>
+    </form>
+    <script>
+        function showName(event) {
+            event.preventDefault(); // Prevent form from submitting
+            let name = document.getElementById("name").value;
+            alert("Hi " + name);
+        }
+    </script>
+
+</body>
+</html>

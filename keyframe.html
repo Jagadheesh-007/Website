@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe</title>
+    <style>
+        @keyframes myanimation {
+            0%{
+                transform: translateX(-100%);
+                transform: translateX(0%);
+            }
+            25%{
+                transform: translateX(0%);
+                transform: translateY(100%);
+            }
+            50%{
+                transform: translateX(100%);
+                transform: translateY(200%);
+            }
+            75%{
+                transform: translateX(200%);
+                transform: translateY(300%);
+            }
+            100%{
+                transform: translateX(300%);
+                transform: translateY(400%);
+            }
+        }
+        .animate
+        {
+            animation: myanimation 2s ease-in;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="animate"><img src="assets\8864306.jpg" width="100px"></div>
+</body>
+</html>
