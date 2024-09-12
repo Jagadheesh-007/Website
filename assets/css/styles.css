@@ -29,7 +29,6 @@ body {
 
 
 .profile-data {
-    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +45,7 @@ body {
 
 .section1 {
     width: 70%;
-    height: 7rem;
+    height: auto;
     background: #16A085;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #F4D03F, #16A085);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -191,6 +190,18 @@ td
     background: linear-gradient(to right, #ffffff, #90e458); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+footer
+{
+  width: 70%;
+  height: 3rem;
+  background-color: #90e458;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 10px;
+}
 table{
   padding-top: 10px;
 }
@@ -318,4 +329,11 @@ ul {
 	border-radius: 5px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #e8cd5f;
+}
+@media only screen and (max-width:792px){
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
