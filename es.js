@@ -4,3 +4,7 @@ const arr1 = ["S1","S2"];
 const arr2 = [1,22];
 const arr3 = [...arr1,...arr2];
 console.log(...arr3)
+for(let i=0;i<5;i++)
+{
+    console.log(i);
+}

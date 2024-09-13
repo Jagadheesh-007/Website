@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fo-nt-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Contact Form</title>
     <style>
         *
         {
@@ -77,7 +78,14 @@ background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, F
         {
             .center-form
             {
-                justify-content: flex-start;
+                width: 80%;
+            }
+        }
+        @media only screen and (max-width:1000px)
+        {
+            .center-form
+            {
+                width: 50%;
             }
         }
     </style>
@@ -90,6 +98,7 @@ background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, F
             <input type="text" name="name" id="name" placeholder="Name"><br><br>
             <input type="email" name="email" id="email" placeholder="Email" required><br><br>
             <input type="phone" name="phone" id="phone" placeholder="Phone" required><br><br>
+            <input type="number" name="age" id="age" placeholder="age" required><br><br>
             <input type="password" name="password" id="password" placeholder="Password" required><br><br>
             <button type="submit" class="button">Register</button>
         </div>
@@ -102,14 +111,31 @@ background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, F
          let email=document.getElementById("email").value;
          let phone=document.getElementById("phone").value;
          let password=document.getElementById("password").value;
+         let age=document.getElementById("age").value;
           const data = {
             username :name,
             useremail :email,
-            userphone :phone
+            userphone :phone,
+            userage :age,
+            usertype : (age >=18 )? "Major":"Minor"
           };
-          const {username , useremail , userphone} =data;
+          if(name === "" || email === "")
+          {
+            console.log("user name / email empty");
+          }
+          else if(name === "Jagadheesh" || email==="jagadheesh2005@gmail.com")
+          {
+            console.log("Name Already exists");
+          }
+          else
+          {
+            console.log("Registered Successfully");
+          }
+          const {username , useremail , usertype,userage} =data;
           console.log(username);
           console.log(useremail);
+          console.log(userage);
+          console.log(usertype);
         }
         </script>
 </body>
