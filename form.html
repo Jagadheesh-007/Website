@@ -15,15 +15,18 @@
             justify-content: center;
             height: 100vh;
             font-family: 'Times New Roman', Times, serif;
-            background: #cc2b5e;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: #40E0D0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
         }
         .center-form {
             width: 30%;
             padding: 10px;
-            filter: blur(1px);
+            background: #ec008c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
             border-radius: 15px;
             justify-content: center;
             height: auto;
@@ -70,11 +73,18 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
             border-style: none;
             margin-bottom: 10px;
         }
+        @media only screen and (max-width:600px)
+        {
+            .center-form
+            {
+                justify-content: flex-start;
+            }
+        }
     </style>
 </head>
 <body>
         
-    <form action="#action" method="POST" class="center-form" >
+    <form class="center-form" onsubmit="form_data(event)">
         <h1><center>Contact Form</center></h1>
         <div class="content">
             <input type="text" name="name" id="name" placeholder="Name"><br><br>
@@ -84,6 +94,23 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
             <button type="submit" class="button">Register</button>
         </div>
     </form>
-
+    <script>
+        function form_data(e)
+        {
+        e.preventDefault();
+         let name=document.getElementById("name").value;
+         let email=document.getElementById("email").value;
+         let phone=document.getElementById("phone").value;
+         let password=document.getElementById("password").value;
+          const data = {
+            username :name,
+            useremail :email,
+            userphone :phone
+          };
+          const {username , useremail , userphone} =data;
+          console.log(username);
+          console.log(useremail);
+        }
+        </script>
 </body>
 </html>
