@@ -43,6 +43,7 @@ background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, F
   0px 0px 28.5px rgba(0, 0, 0, 0.055),
   0px 0px 45px rgba(0, 0, 0, 0.07)
 ;
+            animation: myanimation 1s ease-in-out;
         }
         .content {
             border-radius: 10px;
@@ -74,11 +75,15 @@ background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, F
             border-style: none;
             margin-bottom: 10px;
         }
-        @media only screen and (max-width:600px)
-        {
-            .center-form
+        @keyframes myanimation {
+            0%
             {
-                width: 80%;
+                transform: translateX(-210%);
+                scale: 70%;
+            }
+            100%{
+                transform: translateX(0%);
+                scale: 100%;
             }
         }
         @media only screen and (max-width:1000px)
@@ -88,7 +93,16 @@ background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, F
                 width: 50%;
             }
         }
+        @media only screen and (max-width:600px)
+        {
+            .center-form
+            {
+                width: 80%;
+            }
+        }
+        
     </style>
+    <script src="demojs.js"></script>
 </head>
 <body>
         
